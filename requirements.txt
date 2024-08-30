@@ -1,0 +1,16 @@
+
+# install the requirements
+pip install -r requirements.txt
+
+
+
+# requirements.txt
+
+Django>=3.2
+djangorestframework>=3.12
+mysqlclient>=2.0
+django-cors-headers>=3.5  # To handle Cross-Origin Resource Sharing
+gunicorn>=20.0  # WSGI HTTP Server for UNIX, useful for deployment
+Pillow>=8.0  # Image processing library, needed if you handle images
+python-decouple>=3.6  # For environment variable management
+whitenoise>=5.2  # To serve static files in production
