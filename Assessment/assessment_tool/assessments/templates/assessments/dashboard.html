@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   
+   Dashboard
+
+{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <h1>My Assessments</h1>
+    <!-- Implement dashboard-specific components here -->
+    <div class="actions mb-3">
+        <button class="btn btn-primary" onclick=location.href="{% url 'create_assessment' %}">Create New Assessment</button>
+    </div>
+    <!-- Add search, filters, and assessments list -->
+</div>
+{% endblock %}

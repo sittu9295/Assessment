@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h2>Create Assessment</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="title">Assessment Title</label>
+            <input type="text" class="form-control" id="title" name="title">
+        </div>
+        <div class="form-group">
+            <label for="assessment_type">Assessment Type</label>
+            <select class="form-control" id="assessment_type" name="assessment_type">
+                <option value="quiz">Quiz</option>
+                <option value="assignment">Assignment</option>
+                <option value="survey">Survey</option>
+            </select>
+        </div>
+        <!-- Additional fields -->
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock %}
