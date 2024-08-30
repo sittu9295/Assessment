@@ -1,26 +1,39 @@
 # Assessment Tools Project
 
 ## Overview
-This project is an Assessment Tools module designed for teachers and students, enabling teachers to create, manage, and grade assessments while providing students with a user-friendly interface to take assessments and view feedback.
+A Django-based web application for creating and managing assessments for teachers and students.
 
 ## Features
-- Assessment Dashboard for teachers
+- Assessment Dashboard
 - Assessment Creation Page
-- Question Bank Management Page
-- Student View for Assessment Taking
-- Grading and Review Page for Teachers
-- Feedback Summary Page for Students
+- Question Bank Management
+- Student Assessment Page
+- Feedback and Analytics
 
-## Setup
+## Setup and Installation
 
-### Prerequisites
-- Python 3.x
-- Django
-- MySQL
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/sittu9295/assessment_tool.git
+    cd assessment_tool
+    ```
 
-### Installation
+2. Create a virtual environment and install dependencies:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    pip install -r requirements.txt
+    ```
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/sittu9295/assessment-tools.git
-   cd assessment-tools
+3. Apply migrations and run the server:
+    ```bash
+    python manage.py migrate
+    python manage.py runserver
+    ```
+
+## Deployment
+
+The project is hosted on Vercel. To deploy your changes:
+```bash
+vercel
+
