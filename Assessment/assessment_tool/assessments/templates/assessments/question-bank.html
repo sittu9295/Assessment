@@ -6,33 +6,15 @@
 <div class="container mt-4">
     <h1>Question Bank</h1>
     <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Question</th>
-                <th>Category</th>
-                <th>Difficulty</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for question in questions %}
-                <tr>
-                    <td>{{ question.id }}</td>
-                    <td>{{ question.text }}</td>
-                    <td>{{ question.category }}</td>
-                    <td>{{ question.difficulty }}</td>
-                    <td>
-                        <a href="{% url 'yourapp:question_edit' question.id %}" class="btn btn-sm btn-primary">Edit</a>
-                        <a href="{% url 'yourapp:question_delete' question.id %}" class="btn btn-sm btn-danger">Delete</a>
-                    </td>
-                </tr>
-            {% empty %}
-                <tr>
-                    <td colspan="5">No questions available.</td>
-                </tr>
-            {% endfor %}
-        </tbody>
+        <body>
+        <h1>Manage Question Bank</h1>
+        <ul>
+          {% for question in questions %}
+            <li>{{ question.text }} (Type: {{ question.question_type }})</li>
+          {% endfor %}
+        </ul>
+        </body>
     </table>
 </div>
 {% endblock %}
+
